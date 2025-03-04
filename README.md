@@ -17,7 +17,7 @@ To install the required libraries, you can use the following command:
 ```bash
 pip install opencv-python numpy
 
-
+```
 ## 📬 Contact
 For any questions or collaborations, feel free to reach out:  
 
