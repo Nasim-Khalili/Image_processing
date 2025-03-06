@@ -1,4 +1,4 @@
-# Computer Vision Projects: Face & Hand Tracking
+# Computer Vision Projects: Face & Hand Tracking & OpenCV Drawing
 
 This repository contains multiple computer vision projects using OpenCV and cvzone. The two main projects included are:
 
@@ -70,6 +70,70 @@ pip install opencv-python numpy cvzone
 ## References:
 - [cvzone Documentation](https://github.com/cvzone/cvzone)
 - [OpenCV Documentation](https://docs.opencv.org/4.x/)
+
+
+# OpenCV Drawing Example
+
+## Description
+This project demonstrates how to use OpenCV to draw basic shapes and text on an image. The program reads an image, converts it to grayscale or keeps it in color, and then overlays various shapes such as lines, rectangles, circles, and polygons.
+
+## Features
+- Read an image (grayscale or color)
+- Draw a line, rectangle, and circle
+- Draw a polygon using predefined points
+- Overlay text on the image
+- Display the modified image using OpenCV
+
+## Requirements
+- Python 3.x
+- OpenCV (`cv2`)
+- NumPy
+
+## Installation
+```bash
+pip install opencv-python numpy
+```
+
+## Usage
+1. Place your image inside a folder (e.g., `Images/cityscape.jpg`).
+2. Run the script:
+   ```bash
+   python script.py
+   ```
+3. Press `Esc` to close the displayed window.
+
+## Code Overview
+```python
+import numpy as np
+import cv2 as cv
+
+# Read the image (color mode)
+img = cv.imread("Images/cityscape.jpg", cv.IMREAD_COLOR)
+
+# Draw shapes
+cv.line(img, (5,5), (200,150), (0,0,255), 10)  # Red Line
+cv.rectangle(img, (5,5), (200,150), (0,0,255), 8)  # Red Rectangle
+cv.circle(img, (200,150), 50, (0,0,255), 20)  # Red Circle
+
+# Draw a polygon
+points = np.array([[30,5], [300,200],[100,70],[40,100]], np.int32)
+cv.polylines(img, [points], True, (0,0,255), 5)  # Red Polygon
+
+# Add text
+font = cv.FONT_HERSHEY_SIMPLEX
+cv.putText(img, 'Salam be hame', (20,50), font, 1, (0,0,255), 2, cv.LINE_AA)  # Red Text
+
+# Show the image
+cv.imshow('image', img)
+cv.waitKey(0)
+cv.destroyAllWindows()
+```
+
+## Notes
+- Ensure the image path is correct.
+- Change `IMREAD_COLOR` to `IMREAD_GRAYSCALE` if grayscale is needed.
+- Modify shape colors if using grayscale (use a single intensity value like `255`).
+
 
 
 ## 📬 Contact
