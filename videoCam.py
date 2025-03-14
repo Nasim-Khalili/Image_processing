@@ -7,8 +7,8 @@ while(True):
     rec, frame = cap.read()
     frame_hsv = cv.cvtColor(frame, cv.COLOR_BGR2HSV)
 
-    lower_red = np.array([0, 0, 0])
-    upper_red = np.array([180, 255, 50])
+    lower_red = np.array([100,50,50])
+    upper_red = np.array([116,255,255])
 
     mask_red = cv.inRange(frame_hsv, lower_red, upper_red)
     frame_masked = cv.bitwise_and(frame, frame, mask = mask_red)
