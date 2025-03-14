@@ -134,6 +134,31 @@ cv.destroyAllWindows()
 - Change `IMREAD_COLOR` to `IMREAD_GRAYSCALE` if grayscale is needed.
 - Modify shape colors if using grayscale (use a single intensity value like `255`).
 
+# Template Matching with OpenCV
+
+This project detects and highlights a given template inside an image using OpenCV's `matchTemplate` method.
+
+## 📌 Features
+- Reads an input image and a template in grayscale.
+- Uses **Template Matching (cv.matchTemplate)** to find matching regions.
+- Draws rectangles around detected template locations.
+- Displays the final result using Matplotlib.
+
+## 🛠️ Requirements
+- Python 3.x
+- OpenCV (`cv2`)
+- NumPy
+- Matplotlib
+
+## 🚀 Usage
+1. Place your images inside the `Images/` folder:
+   - `building1.jpg` (Main image)
+   - `building1_temp.jpg` (Template to find)
+
+2. Run the script:
+   ```bash
+   python script.py
+
 
 
 ## 📬 Contact
