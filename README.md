@@ -1,4 +1,4 @@
-# Computer Vision Projects: Face & Hand Tracking & OpenCV Drawing
+# Computer Vision Projects: Face & Hand Tracking & OpenCV Drawing & Template Matching with OpenCV
 
 This repository contains multiple computer vision projects using OpenCV and cvzone. The two main projects included are:
 
